@@ -1,4 +1,4 @@
-# CompJust
+# Computational Justice: An Agent-based Simulation of Structural Disparity and Interventions
 For Harvard workshop on Computational Justice.
 Preprint:
 
