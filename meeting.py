@@ -296,11 +296,14 @@ class meeting():
         # 2 If there was an objection, perpetrator takes a cost
         if self.sexism_step_size<0:
             environment.agent_list[perp_id].update_cost_received(1)
+
         
         # 3 IF NO OBJECTION: increase sexism in all perpetrators present
-        if self.sexism_step_size>0:
-            for i in perpetrators:            
-                environment.agent_list[i].update_sexism(self.sexism_step_size)
+        #if self.sexism_step_size>0:
+        # changed December 29, 2020: 
+        # commented "if" line above so all perpetrators get updated whether + or - step size
+        for i in perpetrators:            
+            environment.agent_list[i].update_sexism(self.sexism_step_size)
 
         return environment   
 
